@@ -1,0 +1,160 @@
+/* Custom Variable Theme Base Configuration */
+body {
+    background-color: #0a0c14;
+    color: #f0f2f5;
+    font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header Text Styles */
+.header-banner {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header-banner h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 10px 0;
+    background: linear-gradient(45deg, #00f0ff, #ff0055);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-banner p {
+    color: #707e94;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(0, 240, 255, 0.1);
+    color: #00f0ff;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Container Cards Layout */
+.metric-card, .result-card {
+    background: #111424;
+    border: 1px solid #1f243d;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    background: #070914;
+    border: 1px solid #232a4a;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 16px;
+    font-size: 1rem;
+    resize: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #00f0ff;
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+/* Buttons Controls */
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(90deg, #00f0ff, #0077ff);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    transition: transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+}
+
+/* AI Diagnostics Feedback Layout Elements */
+.result-card {
+    border-left: 5px solid #fff;
+    transition: all 0.4s ease;
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.result-text {
+    font-style: italic;
+    color: #cbd5e1;
+    background: rgba(255,255,255,0.03);
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin: 8px 0;
+}
+
+.result-description {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+.reset-btn {
+    display: inline-block;
+    background: #1f243d;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.reset-btn:hover {
+    background: #2b3254;
+    color: #fff;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Cyberbullying Engine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Structure -->
+        <div class="header-banner">
+            <span class="badge">Next-Gen ML Classification</span>
+            <h1>AI Cyberbullying Engine</h1>
+            <p>Enter communication logs to process text tokens across our deep analysis categories.</p>
+        </div>
+
+        <!-- Submission Form Box -->
+        <div class="metric-card">
+            <form action="/predict" method="POST">
+                <textarea name="text" rows="5" placeholder="Type or paste message strings here for processing..." required>{{ text if text else '' }}</textarea>
+                <button type="submit" class="submit-btn">EXECUTE AI SCAN</button>
+            </form>
+        </div>
+
+        <!-- Dynamic ML Processing Diagnostic Cards -->
+        {% if evaluated %}
+        <div class="result-card animate-fade-in" style="border-color: {{ theme_color }};">
+            <div class="result-header" style="color: {{ theme_color }};">
+                <span class="pulse-dot" style="background-color: {{ theme_color }};"></span>
+                <strong>SCAN SUMMARY: {{ result }}</strong>
+            </div>
+            <p class="result-text">"{{ text }}"</p>
+            <div class="result-description">{{ explanation }}</div>
+            <a href="/" class="reset-btn">CLEAR MATRIX LOGS</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
